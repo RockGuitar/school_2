@@ -1,25 +1,18 @@
 package ru.hogwarts.school.service;
 
 import org.springframework.stereotype.Service;
-import ru.hogwarts.school.model.Faculty;
-import ru.hogwarts.school.model.Student;
-
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import ru.hogwarts.school.model.Faculty;;
 
 @Service
 public interface FacultyService {
-    Map<Integer, Faculty> facultyMap = new HashMap<>();
 
-    Faculty createFaculty ( Long facultyId, String facultyName, String facultyColor );
+    Faculty createFaculty ( Faculty faculty );
 
-    Faculty readFaculty ( int facultyKey );
+    Faculty readFaculty ( Long id );
 
-    Faculty updateFaculty ( int facultyKey, Faculty faculty );
+    Faculty updateFaculty ( Faculty faculty );
 
-    Faculty deleteFaculty ( int facultyKey );
+    void deleteFaculty ( Long id );
 
-    List<Faculty> filterFaculty ( String color );
 
 }
